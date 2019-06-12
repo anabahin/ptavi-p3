@@ -20,15 +20,8 @@ class SmallSMILHandler(ContentHandler):
             self.tag_list.append([name, dicc])
 
     def get_tags(self):
-    
-        tags = ''
-        for tag in self.tag_list:
-            tags += tag[0] + ': '
-            for att in tag[1]:
-                tags += att + '="' + tag[1][att] + '" '
-            tags += '\n'
 
-        return tags
+        return self.tag_list
 
 
 if __name__ == '__main__':
